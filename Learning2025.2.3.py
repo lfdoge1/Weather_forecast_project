@@ -33,3 +33,4 @@ else:
     # 5️⃣ 显示图形
     plt.tight_layout()
     plt.show()
+    dips = df.iloc[:, 5]

@@ -1,0 +1,14 @@
+# Ignore output files
+outputs/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore model files and intermediate results
+*.h5
+*.pkl
+
+# Ignore virtual environment
+venv/
+.env

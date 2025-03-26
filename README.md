@@ -16,66 +16,89 @@ weather-prediction/
 ├── client_socket.py               # Simple socket client to send messages
 ├── server_socket.py               # Server that loads models and replies with predictions
 ├── weather_Delhi.py               # Model training script for Delhi
-├── weather_coventry.py           # Model training script for Coventry
+├── weather_coventry.py            # Model training script for Coventry
 ├── data/                          # Original weather datasets
-│   ├── weatherdata.csv           # Delhi raw data
-│   └── coventry_data.csv         # Coventry raw data
+│   ├── weatherdata.csv            # Delhi raw data
+│   └── coventry_data.csv          # Coventry raw data
 ├── outputs/                       # Trained models, scalers, and cleaned datasets (not uploaded)
 │   ├── *.h5, *.pkl, *_clean.csv
+├── requirements.txt               # Auto-generated via pip freeze
 ├── .gitignore
 └── README.md
 ```
 
 ## ⚙️ How to Run the Project
 
-### 🔹 Step 1: Train the Models
+### 🔹 Step 1: Clone the Repository
 
-Make sure your raw data is placed under the `data/` folder.
+```bash
+git clone https://github.com/lfdoge1/Weather_forecast_project.git
+cd Weather_forecast_project
+```
+
+### 🔹 Step 2: (Optional) Create Virtual Environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate      # On Windows
+# or
+source venv/bin/activate     # On macOS/Linux
+```
+
+### 🔹 Step 3: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 🔹 Step 4: Train Models
 
 ```bash
 python weather_Delhi.py
 python weather_coventry.py
 ```
 
-These scripts will:
+This will:
 - Clean the data
 - Train LSTM models
-- Save models and scalers to `outputs/`
+- Save models and scalers into `outputs/`
 
-### 🔹 Step 2: Start the Server
+### 🔹 Step 5: Start the Server
 
 ```bash
 python server_socket.py
 ```
 
-This will:
-- Load models and scalers
-- Accept natural language input (like "weather in Delhi in 3 days")
-
-### 🔹 Step 3: Start the Client
+### 🔹 Step 6: Start the Client
 
 ```bash
 python client_socket.py
 ```
 
-This allows you to type queries and receive temperature forecasts.
-
-## 💬 Sample Query
+Enter natural language queries like:
 
 ```
 > What is the weather in Delhi in 2 days?
-< Forecast for Delhi on 2024-03-28 (2 day(s) from today): 28.62°C
+< Forecast for Delhi on 2025-03-28 (2 day(s) from today): 28.62°C
 ```
+
+---
 
 ## 📦 Dependencies
 
-Install requirements with:
+All required libraries are listed in `requirements.txt`, auto-generated via:
+
+```bash
+pip freeze > requirements.txt
+```
+
+Install them with:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Make sure `tensorflow`, `joblib`, `pandas`, and `numpy` are included.
+---
 
 ## 🙌 Author
 

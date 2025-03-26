@@ -1,14 +1,17 @@
-# Ignore output files
-outputs/
-
-# Ignore Python cache
+# Python cache
 __pycache__/
 *.pyc
 
-# Ignore model files and intermediate results
-*.h5
-*.pkl
-
-# Ignore virtual environment
+# Virtual environment
 venv/
-.env
+.env/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Allow outputs (models and images)
+!outputs/
+!outputs/*.h5
+!outputs/*.pkl
+!outputs/*.png
+!outputs/*.jpg

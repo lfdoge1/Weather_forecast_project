@@ -59,6 +59,7 @@ pip install -r requirements.txt
 python weather_Delhi.py
 python weather_coventry.py
 ```
+⚠️ ⚠️ ⚠️ Warning: You must run both main programs, otherwise the server and client will not work.
 
 This will:
 - Clean the data

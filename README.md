@@ -59,8 +59,9 @@ pip install -r requirements.txt
 python weather_Delhi.py
 python weather_coventry.py
 ```
-⚠️ ⚠️ ⚠️ Warning: You must run both main programs, otherwise the server and client will not work.
-⚠️ ⚠️ ⚠️ NOTE: The main program will not terminate until all plot windows are closed.
+        ⚠️ ⚠️ ⚠️ Warning: You must run both main programs, otherwise the server and client will not work.
+        
+        ⚠️ ⚠️ ⚠️ NOTE: The main program will not terminate until all plot windows are closed.
 
 This will:
 - Clean the data

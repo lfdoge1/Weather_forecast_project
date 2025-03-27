@@ -287,7 +287,16 @@ for feature in features:
     fig = px.box(df, x='month', y=feature,
                  title=f'Monthly Distribution of {feature.replace("_", " ").title()}',
                  template='xgridoff_dark')
+    #update the front size
+    fig.update_layout(
+        font=dict(size=12),
+        title=dict(font=dict(size=20)),
+        xaxis=dict(title_font=dict(size=20), tickfont=dict(size=18)),  #original 14 12
+        yaxis=dict(title_font=dict(size=20), tickfont=dict(size=18)),
+    )
     fig.show()
+
+
 
 # ----------------------------
 # Feature Selection
@@ -442,10 +451,13 @@ validation_loss = history.history['val_loss']
 # Plot loss values over epochs
 plt.plot(training_loss, label='Training Loss')
 plt.plot(validation_loss, label='Validation Loss')
-plt.xlabel('Epoch')
-plt.ylabel('Loss (MSE)')
-plt.title('Training and Validation Loss')
-plt.legend()
+
+plt.xlabel('Epoch', fontsize=20)
+plt.ylabel('Loss (MSE)', fontsize=20)
+plt.title('Training and Validation Loss', fontsize=22)
+plt.xticks(fontsize=18)
+plt.yticks(fontsize=18)
+plt.legend(fontsize=18) #ogrinal 14
 plt.show()
 
 #===================================================
@@ -616,10 +628,13 @@ validation_loss = history.history['val_loss']
 # Plot loss values over epochs
 plt.plot(training_loss, label='Training Loss')
 plt.plot(validation_loss, label='Validation Loss')
-plt.xlabel('Epoch')
-plt.ylabel('Loss (MSE)')
-plt.title('Training and Validation Loss')
-plt.legend()
+
+plt.xlabel('Epoch', fontsize=20)
+plt.ylabel('Loss (MSE)', fontsize=20)
+plt.title('Training and Validation Loss', fontsize=22)
+plt.xticks(fontsize=18)
+plt.yticks(fontsize=18)
+plt.legend(fontsize=18) #ogrinal 14
 plt.show()
 
 # To packet
@@ -693,10 +708,13 @@ validation_loss = history.history['val_loss']
 # Plot loss values over epochs
 plt.plot(training_loss, label='Training Loss')
 plt.plot(validation_loss, label='Validation Loss')
-plt.xlabel('Epoch')
-plt.ylabel('Loss (MSE)')
-plt.title('Training and Validation Loss')
-plt.legend()
+
+plt.xlabel('Epoch', fontsize=20)
+plt.ylabel('Loss (MSE)', fontsize=20)
+plt.title('Training and Validation Loss', fontsize=22)
+plt.xticks(fontsize=18)
+plt.yticks(fontsize=18)
+plt.legend(fontsize=18) #ogrinal 14
 plt.show()
 
 #===========================

@@ -29,8 +29,6 @@ weather-prediction/
 
 ## ⚙️ How to Run the Project
 
-### 🔹 Step 0: Python 3.12
-
 ### 🔹 Step 1: Clone the Repository
 
 ```bash

@@ -29,6 +29,8 @@ weather-prediction/
 
 ## ⚙️ How to Run the Project
 
+> ⚠️ This project is tested and designed for **Python 3.12**. Other versions may not work properly.
+
 ### 🔹 Step 1: Clone the Repository
 
 ```bash
